@@ -1,0 +1,9 @@
+[package]
+name = "rust_ffi"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+
+[build-dependencies]
+cc = "1.0" # cc 크레이트 버전은 최신으로 해도 무방

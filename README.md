@@ -51,10 +51,10 @@ fn main() {
 * `unsafe extern "C" { ... }`: 외부 C 함수를 Rust 코드에서 사용하기 위해 선언하는 블록입니다.
     * `extern "C"`는 C 언어의 호출 규약(ABI)을 따르도록 지정합니다.
     * `fn add_integers(a: c_int, b: c_int) -> c_int;`는 호출하려는 C 함수 `add_integers`의 시그니처(이름, 매개변수 타입, 반환 타입)를 Rust에 알려줍니다.
-    * 이 블록 자체는 `unsafe` 키워드로 표시되는데, 이는 외부 함수 호출이 Rust의 메모리 안전성 보장을 벗어날 수 있기 때문입니다[cite: 2].
+    * 이 블록 자체는 `unsafe` 키워드로 표시되는데, 이는 외부 함수 호출이 Rust의 메모리 안전성 보장을 벗어날 수 있기 때문입니다.
 * `fn main() { ... }`: Rust 프로그램의 진입점입니다.
 * `let num1: c_int = 10;` / `let num2: c_int = 20;`: C 함수에 전달할 `c_int` 타입의 변수를 선언하고 초기화합니다.
-* `unsafe { ... }`: 외부 함수 호출과 같이 Rust 컴파일러가 안전성을 보장할 수 없는 작업을 수행할 때 필요한 블록입니다[cite: 2]. PPT에서도 외부 C 함수 호출 시 `unsafe` 블록 사용 예시를 보여줍니다[cite: 2].
+* `unsafe { ... }`: 외부 함수 호출과 같이 Rust 컴파일러가 안전성을 보장할 수 없는 작업을 수행할 때 필요한 블록입니다. PPT에서도 외부 C 함수 호출 시 `unsafe` 블록 사용 예시를 보여줍니다.
     * `sum = add_integers(num1, num2);`: `unsafe` 블록 내에서 앞서 선언한 C 함수 `add_integers`를 호출하고 그 결과를 `sum` 변수에 저장합니다.
 * `println!(...)`: 결과를 출력합니다.
 
